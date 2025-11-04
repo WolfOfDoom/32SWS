@@ -14,7 +14,7 @@ Estructura básica del proyecto:
 
 index.html
 assets/
-├── logo.png
-└── bg.jpg
+├── logo.gif
+└── bg.gif
 
 El sitio puede visualizarse abriendo `index.html` en cualquier navegador y puede desplegarse en plataformas para hosting estático (ej. GitHub Pages, Render Static).
