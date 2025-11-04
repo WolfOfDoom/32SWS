@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>32SWS</title>
+    <style>
+        :root {
+            --container-w: 1000px;
+            --bg-overlay: rgba(0, 0, 0, .35);
+            --card: rgba(0, 0, 0, 0.86);
+            --text: #ffffff;
+            --accent: #02193f;
+        }
+
+        /* Fondo de página */
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            color: var(--text);
+            background: linear-gradient(var(--bg-overlay), var(--bg-overlay)),
+                url("assets/bg.gif") fixed;
+        }
+
+        /* Contenedor global */
+        .container {
+            max-width: var(--container-w);
+            margin: 0 auto;
+            padding: 16px;
+            min-height: 100dvh;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            gap: 16px;
+        }
+
+        header,
+        main,
+        footer {
+            background: var(--card);
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .15);
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            align-items: center;
+            padding: 14px 18px;
+            gap: 16px;
+        }
+
+        header img.logo {
+            height: 56px;
+            /* Logo a la izquierda */
+            width: auto;
+            display: block;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: clamp(18px, 2.4vw, 26px);
+        }
+
+        /* Main */
+        main {
+            padding: 20px;
+        }
+
+        .card {
+            background: #000000;
+            border: 1px solid #464545;
+            border-radius: 14px;
+            padding: 18px;
+        }
+
+        a.btn {
+            display: inline-block;
+            padding: 12px 16px;
+            border-radius: 12px;
+            background: var(--accent);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a.btn:hover {
+            filter: brightness(.95);
+        }
+
+        /* Footer */
+        footer {
+            padding: 18px;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        footer b {
+            font-weight: 700;
+        }
+
+        /* Accesibilidad mínima */
+        a:focus {
+            outline: 3px solid #000;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <!-- Logo a la IZQUIERDA dentro del header -->
+            <img class="logo" src="assets/logo.gif" alt="Logo del sitio" />
+            <h1>32SWS</h1>
+        </header>
+
+        <main>
+            <div class="card">
+                <h2>Enlace a video de un servicio de streaming</h2>
+                <p>
+                    Debajo esta el enlace.
+                </p>
+
+                <p>
+                    <a class="btn" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener">
+                        Ver el video en streaming
+                    </a>
+                </p>
+
+                <div style="margin-top:12px; aspect-ratio:16/9;">
+                    <iframe title="Trailer" width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                        frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div><b>Curso:</b> Conceptualización de servicios en la nube</div>
+            <div><b>Alumno:</b> Jahir Cruz Ortiz</div>
+            <div><b>Código:</b> 224791149</div>
+            <div><b>Contacto:</b> jahir.cruzortiz@gmail.com</div>
+        </footer>
+    </div>
+</body>
+
+</html>
